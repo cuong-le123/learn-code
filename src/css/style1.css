@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 17px;
+    background-size: cover;
+    background-position-y:-50px;
+}
+
+#main-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh; /*min-height:80vh; = 80% độ cao màn hình*/
+}
+
+form{
+    border: 1px solid #dedce0;
+    border-radius: 10px;
+    padding: 30px;
+    background: rgb(255,255,255);
+}
+
+h3{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.form-group{
+    margin-bottom: 30px;
+    position: relative;
+}
+
+input{
+    height: 50px;
+    width:300px;
+    outline: none;
+    border: 1px solid #dedce0;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: inherit;/*inherit: dùng để kế thừa font của thẻ cha*/
+    color: #202124;
+    transition: all 0.3s ease-in-out;
+}
+
+label{
+    position: absolute;
+    padding: 0px 5px;
+    left: 5px;
+    top: 50%;
+    pointer-events: none;/*quan trọng*/
+    transform: translateY(-50%);
+    background: #fff;
+    transition: all 0.3s ease-in-out;
+}
+
+.form-group input:focus{
+    border: 2px solid #1a73e8;
+}
+
+.form-group input:focus + label,.form-group input:valid + label{
+    top: 0px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #1a73e8;
+}
+
+input#btn{
+    background-color:#1a73e8;
+    color: #fff;
+    cursor: pointer;
+}

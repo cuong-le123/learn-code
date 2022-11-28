@@ -1,0 +1,130 @@
+body {
+  background-image: url("../img/cac-mau-background-dep-anime-800x450.jpeg");
+  background-size: cover;
+  background-position-y: -100px;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0px auto;
+}
+
+#header {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  justify-items: center;
+}
+
+.logo {
+  padding: 5px 0px;
+}
+
+#logo img {
+  max-width: 50px;
+  height: auto;
+}
+
+#main-menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#main-menu li {
+  position: relative;
+}
+
+#main-menu li a {
+  color: white;
+  display: block;
+  padding: 20px 20px;
+  text-decoration: none;
+}
+
+#main-menu ul.sub-menu {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px 0px;
+  list-style: none;
+  width: 200px;
+  border: 1px solid rgb(82, 81, 81);
+  display: none;
+}
+
+#main-menu li:hover > ul.sub-menu {
+  display: block;
+}
+
+#main-menu ul.sub-menu a {
+  padding: 10px 15px;
+  border-bottom: 1px solid rgb(82, 81, 81);
+  left: 0;
+}
+
+#main-menu ul.sub-menu li:hover > a {
+  border-bottom: 1px solid rgb(255,255, 255);
+}
+
+#main-menu ul.sub-menu li:last-child a {
+  border: none;
+}
+
+#main-menu ul.sub-menu ul.sub-menu {
+  left: 200px;
+  top: -5px;
+}
+
+#main-menu > li > a {
+  position: relative;
+}
+
+#main-menu > li > a::before {
+  content: "";
+  height: 4px;
+  width: 100%;
+  background: #fff;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  display: none;
+}
+
+#main-menu > li:hover > a::before {
+  display: block;
+}
+
+
+#main-menu>li.has-child::after{
+  font-family: "Font Awesome 5 Free"; 
+  font-weight: 900; 
+  content: "\f107";
+  color: #858585;
+  position: absolute;
+  top:0px;
+  right:0px;
+  padding: 18px 0px;
+}
+
+#main-menu .sub-menu li:hover>a{
+  color: orangered;
+}
+
+#main-menu .sub-menu>li.has-child::after{
+  font-family: "Font Awesome 5 Free"; 
+  font-weight: 900; 
+  content: "\f105";
+  color: #858585;
+  position: absolute;
+  top:0px;
+  right:0px;
+  padding: 10px 0px;
+}
+
+#main-menu .sub-menu>li.has-child:hover::after{
+  color: orangered;
+}

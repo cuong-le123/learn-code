@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dropdown Menu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/dropdown-menu.css">
+  </head>
+  <body>
+    <div id="wrapper">
+      <div id="header">
+        <nav class="container">
+          <a href="" id="logo">
+            <img
+              src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png"
+              alt="GIT"
+            />
+          </a>
+          <ul id="main-menu">
+            <li>
+                <a href="">About</a>
+            </li>
+            <li>
+                <a href="">Documentation</a>
+                <ul class="sub-menu">
+                    <li>
+                        <a href="">Menu 2.1</a>
+                    </li>
+                    <li>
+                        <a href="">Menu 2.2</a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a href="">Menu 2.2.1</a>
+                            </li>
+                            <li>
+                                <a href="">Menu 2.2.2</a>
+                            </li>
+                            <li>
+                                <a href="">Menu 2.2.3</a>
+                            </li>
+                            <li>
+                                <a href="">Menu 2.2.4</a>
+                                <ul class="sub-menu">
+                                  <li>
+                                      <a href="">Menu 2.2.4.1</a>
+                                  </li>
+                                  <li>
+                                      <a href="">Menu 2.2.4.2</a>
+                                  </li>
+                                  <li>
+                                      <a href="">Menu 2.2.4.3</a>
+                                  </li>
+                                  <li>
+                                      <a href="">Menu 2.2.4.4</a>
+                                  </li>
+                              </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="">Menu 2.3</a>
+                    </li>
+                    <li>
+                        <a href="">Menu 2.4</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="">Downloads</a>
+            </li>
+            <li>
+                <a href="">Community</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
+    <script>
+      $(document).ready(function(){
+        //tìm tất cả các li có sub-menu để thêm class: has -child
+        $('.sub-menu').parent('li').addClass('has-child')
+      })
+    </script>
+  </body>
+</html>
